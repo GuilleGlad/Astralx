@@ -49,6 +49,10 @@ export const Input: React.FC<InputProps> = ({
           <TouchableOpacity
             style={styles.eyeIcon}
             onPress={() => setIsPasswordVisible(!isPasswordVisible)}
+            accessibilityLabel={
+              isPasswordVisible ? 'Hide password' : 'Show password'
+            }
+            accessibilityRole="button"
           >
             <Text style={styles.eyeIconText}>
               {isPasswordVisible ? '👁️' : '👁️‍🗨️'}

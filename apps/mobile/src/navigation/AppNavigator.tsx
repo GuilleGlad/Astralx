@@ -54,8 +54,14 @@ const MainNavigator = () => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
-            <Text style={{ fontSize: 24, color }}>🏠</Text>
+            <Text
+              style={{ fontSize: 24, color }}
+              accessibilityLabel="Home icon"
+            >
+              🏠
+            </Text>
           ),
+          tabBarAccessibilityLabel: 'Home tab',
         }}
       />
       <MainTab.Screen
@@ -64,8 +70,14 @@ const MainNavigator = () => {
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
-            <Text style={{ fontSize: 24, color }}>👤</Text>
+            <Text
+              style={{ fontSize: 24, color }}
+              accessibilityLabel="Profile icon"
+            >
+              👤
+            </Text>
           ),
+          tabBarAccessibilityLabel: 'Profile tab',
         }}
       />
     </MainTab.Navigator>

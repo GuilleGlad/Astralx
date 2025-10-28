@@ -8,9 +8,10 @@ import {
   ApiError,
 } from '../types/auth.types';
 
-const API_URL = __DEV__
-  ? 'http://localhost:3000/api'
-  : 'https://api.astralx.com/api';
+// API URL configuration - should be set via environment variables
+const API_URL =
+  process.env.NX_API_URL ||
+  (__DEV__ ? 'http://localhost:3000/api' : 'https://api.astralx.com/api');
 
 class ApiService {
   private api: AxiosInstance;
