@@ -63,7 +63,7 @@ Prepare the development environment, repository and workflows to accelerate MVP 
 **Implementation:**
 
 - ✅ Complete `docker-compose.yml` with:
-  - **MySQL 8.0**: Port 3306, with initial schema and sample users
+  - **MySQL 8.0**: Port 3306, with initial schema and sample users (development only - dummy credentials)
   - **Redis 7**: Port 6379, configured for persistence
   - **MinIO**: Ports 9000 (API) & 9001 (Console), with bucket auto-creation
   - **API**: Port 3000, with hot-reload support
@@ -277,5 +277,4 @@ npm run generate:api-client
 
 ---
 
-_Generated: 2025-10-28_
-_Developer: GitHub Copilot Agent_
+_Completed: 2025-10-28_
