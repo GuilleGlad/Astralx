@@ -1,0 +1,54 @@
+# Build artifacts
+dist
+build
+*.log
+.nx/cache
+.nx/workspace-data
+tmp
+
+# Dependencies
+node_modules
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/*
+!.vscode/launch.json
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage
+
+# Temporary files
+*.tmp
+.cache
+
+# React Native
+.expo
+.expo-shared
+
+# Android
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# iOS
+*.ipa
+Pods/
+*.xcworkspace
+!default.xcworkspace
+
+# Build timestamp files
+vite.config.*.timestamp*
+vitest.config.*.timestamp*

@@ -35,20 +35,52 @@ Facilitar la búsqueda y gestión de servicios automotrices (mecánica, chapa y 
 ```bash
 git clone https://github.com/GuilleGlad/Astralx.git
 cd Astralx
-# Inicializa monorepo y dependencias
+
+# Método 1: Automatizado (recomendado)
+npm run setup:dev
+
+# Método 2: Manual
 npm install
-# Levanta infraestructura local
+cp .env.example .env
 docker-compose up -d
-# Arranca backend y mobile en modo dev
 npm run start:api
 npm run start:mobile
 ```
 
+Accede a:
+
+- API: http://localhost:3000/api
+- Documentación OpenAPI: http://localhost:3000/api/docs
+- MinIO Console: http://localhost:9001
+
 ## Estructura del repositorio
 
-- `/api` — Backend Nest.js (servicios, módulos, entidades, jobs)
-- `/mobile` — App React Native (pantallas, hooks, navegación)
-- `/infra` — Archivos Docker, scripts de setup, configuración de Copilot Agent
+```
+Astralx/
+├── apps/
+│   ├── api/              # Backend Nest.js
+│   │   └── src/
+│   │       ├── app/      # Módulos, controladores, servicios
+│   │       └── main.ts   # Punto de entrada con OpenAPI
+│   ├── api-e2e/          # Tests E2E del API
+│   └── mobile/           # App React Native
+│       ├── android/      # Código nativo Android
+│       ├── ios/          # Código nativo iOS
+│       └── src/          # Código TypeScript/React
+├── infra/
+│   ├── Dockerfile.api    # Imagen Docker del API
+│   ├── init-db.sql       # Schema inicial MySQL
+│   ├── setup-dev.sh      # Script de setup automatizado
+│   └── generate-api-client.sh  # Generador de cliente TypeScript
+├── .github/
+│   ├── workflows/
+│   │   └── ci-cd.yml     # Pipeline CI/CD
+│   └── pull_request_template.md
+├── .husky/               # Git hooks (commitlint)
+├── docker-compose.yml    # Infraestructura completa
+├── nx.json               # Configuración Nx
+└── package.json          # Scripts y dependencias
+```
 
 ## Flujos principales
 
