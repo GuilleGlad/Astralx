@@ -89,9 +89,49 @@ Astralx/
 
 ## Roadmap MVP
 
-- Sprint 0: Infraestructura y productividad inicial
-- Sprint 1: Autenticación y shell móvil
+- ✅ Sprint 0: Infraestructura y productividad inicial
+- ✅ Sprint 1: Autenticación y shell móvil
+  - Backend: Registro, login, verificación de email, recuperación de contraseña, JWT + refresh tokens, RBAC
+  - Mobile: Navegación, theming, gestión de sesión, formularios de auth
 - Sprints siguientes: Solicitudes, matching, agenda, chat, notificaciones, valoraciones, media y flujos QA.
+
+## Estado del Proyecto
+
+### Completado (Sprint 1)
+
+**Backend API:**
+
+- ✅ Sistema de autenticación completo (registro, login, JWT)
+- ✅ Verificación por email con tokens temporales
+- ✅ Recuperación de contraseña
+- ✅ Refresh tokens con rotación automática
+- ✅ RBAC (Cliente/Taller/Admin)
+- ✅ Logs estructurados con trazabilidad
+- ✅ Manejo global de errores
+- ✅ Validación de entrada en todos los endpoints
+- ✅ OpenAPI/Swagger documentation
+
+**Aplicación Móvil:**
+
+- ✅ Navegación completa (Auth stack, Main tabs)
+- ✅ Sistema de theming consistente
+- ✅ Gestión de sesión persistente (AsyncStorage)
+- ✅ Pantallas de login y registro con validación
+- ✅ Pantalla de recuperación de contraseña
+- ✅ Pantalla de perfil
+- ✅ Auto-refresh de tokens JWT
+- ✅ Manejo de estados de carga y errores
+- ✅ Soporte de accesibilidad (screen readers)
+
+### En Progreso
+
+- Documentación de API extendida
+- Tests unitarios y E2E
+
+### Próximos Pasos
+
+- Sprint 2: Perfiles y catálogo de especialidades
+- Sprint 3: Sistema de solicitudes y matching
 
 ## Contribución
 
